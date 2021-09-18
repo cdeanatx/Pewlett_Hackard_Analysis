@@ -10,6 +10,7 @@ CREATE TABLE employees (
 	birth_date DATE NOT NULL,
 	first_name VARCHAR NOT NULL,
 	last_name VARCHAR NOT NULL,
+	gender VARCHAR(1) NOT NULL,
 	hire_date DATE NOT NULL,
 	PRIMARY KEY (emp_no)
 );
@@ -44,7 +45,5 @@ CREATE TABLE titles (
 	title VARCHAR NOT NULL,
 	from_date DATE NOT NULL,
 	to_date DATE NOT NULL,
-	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
-	PRIMARY KEY (emp_no)
+	FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
 );
-SELECT * FROM departments, employees, dept_manager, dept_employee, salaries, titles;
